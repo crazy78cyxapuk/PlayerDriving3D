@@ -32,7 +32,6 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            Debug.Log(CheckGround());
             if (CheckGround())
             {
                 Jump();
@@ -57,7 +56,6 @@ public class PlayerController : MonoBehaviour
             //Left
             rb.AddForce(-transform.right * speed * Time.deltaTime, ForceMode.VelocityChange);
         }
-        Debug.Log(rb.velocity);
     }
 
     private void Jump()
